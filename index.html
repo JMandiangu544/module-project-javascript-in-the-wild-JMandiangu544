@@ -160,18 +160,11 @@ console.log(reverseString('radar')); // should return "It's a palindrome!" */
     // the test runner, please set in each object first name, then age, and finally jsLover.
    
     const zip = (names, years, jsLovers) => {
-  const result = [];
-
-  for (let i = 0; i < names.length; i++) {
-    const obj = {
-      name: names[i],
-      born: years[i].toString(),
-      jsLover: jsLovers[i],
-    };
-    result.push(obj);
-  }
-
-  return result;
+  return names.map((name, index) => ({
+    name,
+    born: years[index].toString(),
+    jsLover: jsLovers[index],
+  }));
 };
 /*
 // Example of usage:
