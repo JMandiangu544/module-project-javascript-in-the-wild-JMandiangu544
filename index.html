@@ -163,12 +163,13 @@ console.log(reverseString('radar')); // should return "It's a palindrome!" */
   return names.map((name, index) => ({
     name,
     born: years[index].toString(),
-    jsLover: jsLovers[index],
+    jsLover: Boolean(jsLovers[index]),
   }));
 };
 /*
 // Example of usage:
-console.log(zip(['Joe', 'Anna'], [1987, 1955], [true, false]));
+const result = zip(['Joe', 'Anna'], [1987, 1955], [true, false]);
+console.log(result);
 // should return [{ name: 'Joe', born: '1987', jsLover: true }, { name: 'Anna', born: '1955', jsLover: false }] */
 
 
