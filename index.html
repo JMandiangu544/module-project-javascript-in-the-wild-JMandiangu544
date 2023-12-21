@@ -160,18 +160,24 @@ console.log(reverseString('radar')); // should return "It's a palindrome!" */
     // the test runner, please set in each object first name, then age, and finally jsLover.
    
     const zip = (names, years, jsLovers) => {
-  return names.map((name, index) => ({
-    name,
-    born: years[index].toString(),
-    jsLover: Boolean(jsLovers[index]),
-  }));
+  const result = [];
+
+  for (let i = 0; i < names.length; i++) {
+    const obj = {
+      name: names[i],
+      born: years[i].toString(),
+      jsLover: jsLovers[i],
+    };
+    result.push(obj);
+  }
+
+  return result;
 };
 /*
 // Example of usage:
-const result = zip(['Joe', 'Anna'], [1987, 1955], [true, false]);
-console.log(result);
-// should return [{ name: 'Joe', born: '1987', jsLover: true }, { name: 'Anna', born: '1955', jsLover: false }] */
-
+console.log(zip(['Joe', 'Anna'], [1987, 1955], [true, false]));
+// should return [{ name: 'Joe', born: '1987', jsLover: true }, { name: 'Anna', born: '1955', jsLover: false }]
+*/
 
     // 🧪 TESTS, do not work below this line
     // 🧪 TESTS, do not work below this line
